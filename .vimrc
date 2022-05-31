@@ -1,6 +1,7 @@
 set nocompatible
 " Syntax highlighting
 syntax on
+" Use colors suitable for dark backgrounds
 set background=dark
 " Built-in Vim colorscheme
 colorscheme slate
@@ -11,6 +12,7 @@ set statusline=
 set statusline+=\ %F\ %M\ %Y\
 set statusline+=%=
 set statusline+=\ row:\ %l\ col:\ %c\ percent:\ %p%%
+" Always display the status bar
 set laststatus=2
 " Disable text wrapping
 set nowrap
@@ -30,3 +32,10 @@ set showmatch
 set incsearch
 " Highlight search results
 set hlsearch
+" Override search highlighting background color
+hi Search ctermbg=LightYellow
+" Override search highlighting foreground color
+hi Search ctermfg=Red
+" Turn autoread on
+" -> May not work
+set autoread
