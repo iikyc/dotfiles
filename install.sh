@@ -12,8 +12,8 @@ echo "[*] Vim and Bash configs copied"
 
 cd ; source .bashrc
 
-# install i3wm and nitrogen
-echo "[*] Installing i3wm , nitrogen and neofetch"
+# install i3wm, nitrogen, neofetch and compton
+echo "[*] Installing i3wm , nitrogen and neofetch compton"
 sudo apt install --yes i3 nitrogen neofetch
 
 # install bumblebee bar
