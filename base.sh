@@ -1,13 +1,6 @@
 #!/bin/bash
 
-# setting up bash and vim configs
-rm $HOME/.vimrc
-rm $HOME/.bashrc
-cp .vimrc $HOME/
-cp .bashrc $HOME
-echo "[*] Vim and Bash configs copied"
-
-cd ; source .bashrc
+cd
 
 # install i3wm and nitrogen
 echo "[*] Installing i3wm , nitrogen and neofetch"
