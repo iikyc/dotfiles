@@ -1,5 +1,8 @@
 #!/bin/bash
 
+echo "[*] This is gonna take a while"
+sudo apt-get update && sudo apt-get upgrade
+
 # setting up bash and vim configs
 rm $HOME/.vimrc
 rm $HOME/.bashrc
@@ -25,4 +28,26 @@ sudo apt install python3-pip
 pip3 install psutil
 pip3 install netifaces
 
+# install awesome-terminal-fonts for bumblebee
+git clone https://github.com/gabrielelana/awesome-terminal-fonts.git
+cd awesome-terminal-fonts/
+./install.sh
+cd
+
+# install ly login manager
+echo "[*] Installing ly login manager"
+sudo apt install build-essential libpam0g-dev libxcb-xkb-dev
+git clone --recurse-submodules https://github.com/nullgemm/ly
+cd ly
+make
+sudo make install
+sudo systemctl disable gdm.service
+sudo systemctl enable ly.service
+
+# install pavucontrol
+echo "[*] Installing pavucontrol"
+sudo apt install pavucontrol -y
+
+
 echo "[*] Done.."
+
